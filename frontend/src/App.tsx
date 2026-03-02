@@ -6,6 +6,8 @@ import Products from "./Products/Products";
 import Orders from './Orders/Orders'
 import OrderDetail from './Orders/OrderDetail'
 import PaymentScreen from './Payment/Payment';
+import Fulfillment from './Fulfillment/Fulfillment';
+import FulfillmentDetail from './Fulfillment/FulfillmentDetail'
 
 function App() {
   const openMenu = () => {
@@ -28,6 +30,7 @@ function App() {
                 <Link to="/catalog">Catalog</Link>
                 <Link to="/orders">Orders</Link>
                 <Link to="/payment">Payment</Link>
+                <Link to="/fulfillment">Fulfillment</Link>
             </div>
         </header>
         <aside className="sidebar">
@@ -50,6 +53,8 @@ function App() {
             <Route path="orders" element={<Orders />}></Route>
             <Route path="order/:id" element={<OrderDetail />}></Route>
             <Route path="payment" element={<PaymentScreen />}></Route>
+            <Route path="fulfillment" element={<Fulfillment />}></Route>
+            <Route path="fulfillment/:id" element={<FulfillmentDetail />}></Route>
           </Routes>
         </main>
         <footer className="footer">
